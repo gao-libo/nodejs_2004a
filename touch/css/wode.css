@@ -1,0 +1,130 @@
+*{margin:0;padding:0;}
+ul ,li{list-style:none;}
+.box{
+    width: 100%;
+   
+}
+.text{
+    width: 100%;
+    height:4rem;
+    background:rgb(245,245,245);
+    padding:1rem 0.4rem;
+  padding-left: 1rem;
+  border-radius:0 0 20px 20px;
+  transition:transform 2s linear;
+ 
+}
+.text-left>div>h4{
+    font-size: 0.4rem;
+}
+.text-left>div>p{
+    font-size: 0.2rem;
+    color:gray;
+}
+.text-left>div{
+    margin-right: 2rem;
+   float: left;
+  
+}
+
+.text-right{
+    margin-top:-0.5rem;
+    clear: both;
+}
+.text-right>li{
+    float: left;
+    margin-right:0.5rem;
+}
+.text-right>li>p{
+    font-size: 0.24rem;
+}
+.nav{
+    width: 100%;
+    height:1.5rem;
+    margin-left: 0.3rem;
+    padding:0.3rem 0;
+   
+}
+.nav>li{
+    width: 22%;
+    height:1.5rem;
+    /* background:gray; */
+    text-align:center;
+    float: left;
+    margin-left: 0.3rem;;
+}
+.nav>li>p{
+    font-size: 0.266667rem;
+    margin-top:0.2rem;
+}
+.list{
+    width: 100%;
+  
+
+}
+.span-a{
+    display: block;
+    width: 1rem;
+    height:1rem;
+    background:gray;
+    margin:0.4rem;
+    border-radius:50%;
+    float: left;
+    transition:transform 1s linear;
+}
+.span-b{
+    display: block;
+    padding:0.2rem;
+    background:black;
+    color:white;
+    font-size: 0.24rem;
+    float: left;
+    border-radius: 10px;
+    margin-top:0.5rem;
+}
+.banner{
+    width: 100%;
+    height:12rem;
+    /* background:pink; */
+    overflow: hidden;
+    clear: both;
+    margin-left:0.5rem;
+}
+.banner>div>p{
+    font-size: 0.24rem;
+}
+.banner>div{
+    width: 40%;
+    height: 5rem;
+   
+    float: left;
+    margin:0.2rem 0.3rem;
+}
+.button>li{
+    margin-top:1rem;
+    float: left;
+    margin-left:1.56rem;
+}
+.text-left{
+    transition:transform 1s linear;
+    margin-top:-4rem;
+}
+.text-right{
+    transition:transform 1s linear;
+    margin-top:-4rem;
+}
+.box:hover .text-left{
+    transform:translate(0,4rem)
+}
+.box:hover .text-right{
+    transform:translate(0,4rem);
+}
+.span-b{
+    transition:transform 1s linear;
+}
+.banner>div{
+    transition:transform 20s linear;
+}
+.box:hover .banner>div{
+    transform:translate(0,-10rem)
+}

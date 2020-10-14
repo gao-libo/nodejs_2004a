@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/flexible.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .box-a {
+            width: 100%;
+            height: 1rem;
+            background: rgb(0, 140, 255);
+        }
+
+        .box-a>li {
+            font-size: 0.586667rem;
+            color: white;
+            margin: 0 0.8rem;
+        }
+
+        .box-a {
+            display: flex;
+            /* justify-content: space-around; */
+        }
+
+        .box>span {
+            font-size: 0.533333rem;
+        }
+
+        .seg>span {
+            font-size: 0.533333rem;
+        }
+
+        .box-b {
+            font-size: 0.533333rem;
+        }
+
+        .box-b>li>input {
+            width: 70%;
+            height: 0.8rem;
+        }
+
+        .box-b>li {
+            padding: 0.4rem 0.2rem;
+        }
+
+        button {
+            margin-left: 15%;
+            width: 70%;
+            height: 1.2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="box-a">
+            <li class="li">返回</li>
+            <li>添加页面</li>
+        </ul>
+
+
+        <ul class="box-b">
+            <li><span>联系人：</span><input type="text" class="input-a"></li>
+            <li class="title">
+                <p class="seg"><span class="span-a">先生</span><span class="span-b">女士</span></p>
+            </li>
+            <li><span>电话：</span> <input type="text" class="input-b"></li>
+            <li><span>地址：</span> <input type="text" class="input-c"></li>
+            <li><span>门牌号：</span><input type="text" class="input-d"></li>
+        </ul>
+
+    </div>
+    <button>确定</button>
+</body>
+
+</html>
+<script>
+    function $(el) { return document.querySelector(el) }
+    var num = sessionStorage.getItem('name')
+    var hhh=sessionStorage.getItem('ddd')
+    if (hhh === '编辑') {
+        $('.input-a').value = '',
+            $('.input-b').value = '',
+            $('.input-c').value = '',
+            $('.input-a').value = ''
+            console.log(33333)
+    }else {
+        console.log(2222222)
+        var lil = localStorage.getItem('value')
+        var hehe = JSON.parse(lil)
+        console.log(hehe)
+            $('.input-a').value = hehe.age,
+            $('.input-b').value = hehe.shouji,
+            $('.input-c').value = hehe.name,
+            $('.input-a').value = hehe.value
+    }
+
+
+
+    $('.li').onclick = function () {
+        history.back()
+    }
+var n=2
+    $('button').onclick = function () {
+        n++
+        var inpu = {
+            id:n,
+            name: $('.input-a').value,
+            value: $('.input-b').value,
+            age: $('.input-c').value,
+            shouji: $('.input-a').value,
+        }
+        inpu=JSON.stringify(inpu)
+        localStorage.setItem('ppp',inpu)
+        history.back()
+    }
+</script>
